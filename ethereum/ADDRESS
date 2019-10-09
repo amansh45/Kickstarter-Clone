@@ -1,0 +1,9 @@
+npm install --save mocha ganache-cli web3@1.0.0-beta.26
+
+npm install --save truffle-hdwallet-provider
+
+npm install --save next@4.1.4 react react-dom
+
+npm install --save semantic-ui-react
+
+0xed4C1a64e8b75685c25B2bBdeAc33012c4d747B4

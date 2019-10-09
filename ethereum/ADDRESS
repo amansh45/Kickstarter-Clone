@@ -6,4 +6,6 @@ npm install --save next@4.1.4 react react-dom
 
 npm install --save semantic-ui-react
 
+npm install --save semantic-ui-css
+
 0xed4C1a64e8b75685c25B2bBdeAc33012c4d747B4

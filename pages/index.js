@@ -3,6 +3,9 @@
 
 import React, { Component } from 'react';
 import factory from '../ethereum/factory';
+import { Card, Button } from 'semantic-ui-react';
+import Layout from '../components/Layout';
+
 
 class CampaignIndex extends Component {
 	
@@ -12,9 +15,32 @@ class CampaignIndex extends Component {
 		return { campaigns };
 	}
 
-	render() {
-		return <div>{this.props.campaigns[0]}</div>;
+	renderCampaigns() {
+		const items = this.props.campaigns.map(address => {
+			// Setting fluid: true, the card will float to its maximum width 
+			return {
+				header: address,
+				description: <a>View Campaign</a>,
+				fluid: true
+			}
+		});
+		return <Card.Group items={items} />;
 	}
+
+	render() {
+		// primary property add a blue style to the button
+		// All the JSX which is inside the layout will be passes to layout as children property...
+		return( 
+			<Layout>
+				<div>
+					<h3>Open Campaigns</h3>
+					<Button floated="right" content="Create Campaign" icon="add circle" primary />
+					{this.renderCampaigns()}
+				</div>
+			</Layout>
+		);
+	}
+
 }
 
 export default CampaignIndex;
